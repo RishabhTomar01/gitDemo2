@@ -10,6 +10,11 @@ project:
     source_format: sfdx
 
 tasks:
+    run_hello_world:
+        Description: that will print hellow world in debug
+        class\-path: force-app\main\default\classes\HelloWorld.cls
+        Group: i don't know
+
     robot:
         options:
             suites: robot/cciDeom2/tests
