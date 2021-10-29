@@ -1,0 +1,26 @@
+minimum_cumulusci_version: '3.47.0'
+project:
+    name: cciDeom2
+    package:
+        name: cciDemo
+        api_version: '52.0'
+    git:
+    test:
+        name_match: '15'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cciDeom2/tests
+            options:
+                outputdir: robot/cciDeom2/results
+
+    robot_testdoc:
+        options:
+            path: robot/cciDeom2/tests
+            output: robot/cciDeom2/doc/cciDeom2_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
